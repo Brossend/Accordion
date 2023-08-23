@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+
+    padding: 49px 103px 33px 103px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    margin-right: 30px;
+}
+
+.description__title {
+    max-width: 657px;
+
+    color: #283F75;
+
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.34px;
+
+    margin-bottom: 30px;
+}
+
+.description__text {
+    max-width: 540px;
+
+    color: #5B5B5B;
+
+    font-size: 16px;
+
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.accordion {
+    padding: 20px 30px 20px 30px;
+
+    max-width: 560px;
+
+    list-style-type: none;
+
+    border: 1px solid #C6CDDA;
+    background: #FFF;
+
+    cursor: pointer;
+}
+
+.accordion:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.accordion:last-child {
+    margin-bottom: 33px;
+}
+
+.accordion__control {
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion__button {
+    text-align: left;
+
+    min-width: 460px;
+
+    border: 0px;
+    background: transparent;
+
+    color: #283F75;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21px;
+
+    cursor: pointer;
+}
+
+.accordion__buttonIcon {
+    width: 10px;
+    height: 10px;
+
+    margin-top: 6px;
+    margin-left: 30px;
+
+    background-image: url('../image/accordion/buttonIcon.svg');
+    background-repeat: no-repeat;
+}
+
+.accordion__iconIsActive {
+    transform: rotate(180deg);
+}
+
+.accordion__content {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+
+    color: #5B5B5B;
+
+    font-size: 16px;
+
+    font-weight: 400;
+    line-height: 24px;
+
+    will-change: max-height;
+
+    transition: all 0.3s ease;
+}
+
+.accordion__contentIsActive {
+    opacity: 1;
+    margin-top: 20px;
+}
